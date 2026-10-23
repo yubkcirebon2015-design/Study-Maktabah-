@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-emerald-primary: #064e3b;
+    --color-emerald-light: #047857;
+    --color-gold-accent: #d97706;
+    --color-gold-light: #f59e0b;
+    --color-ivory-bg: #faf8f5;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+    direction: rtl;
+    line-height: 2.2;
+    text-align: right;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
+  }
+}
+
+/* Islamic Geometric decorative styling */
+.islamic-border {
+  border-image: linear-gradient(to right, #047857, #d97706, #047857) 1;
+}
+
+/* Smooth reading scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================================
+   MODE GELAP (Malam & Emerald Gelap)
+   ============================================================ */
+html.dark {
+  background-color: #0c1311 !important;
+  color: #e5e7eb !important;
+}
+
+html.dark body {
+  background-color: #0c1311 !important;
+  color: #e5e7eb !important;
+}
+
+/* ============================================================
+   MODE NYAMAN (Kertas Hangat & Ramah Mata / Eye Comfort Sepia)
+   Dirancang khusus untuk membaca naskah dalil berlama-lama tanpa silau
+   ============================================================ */
+html.mode-nyaman {
+  background-color: #f7f1e5 !important;
+  color: #2b221a !important;
+}
+
+html.mode-nyaman body {
+  background-color: #f7f1e5 !important;
+  color: #2b221a !important;
+}
+
+/* Header & Navigation in Mode Nyaman */
+html.mode-nyaman header {
+  background-color: rgba(247, 241, 229, 0.95) !important;
+  border-color: #e4d8bf !important;
+}
+
+/* Main background surfaces */
+html.mode-nyaman .bg-\[\#faf8f5\] {
+  background-color: #f7f1e5 !important;
+}
+
+/* Reading and content cards */
+html.mode-nyaman .bg-white {
+  background-color: #fffdf8 !important;
+  border-color: #e5dac1 !important;
+  box-shadow: 0 1px 3px 0 rgba(70, 50, 20, 0.05);
+}
+
+/* Secondary neutral containers */
+html.mode-nyaman .bg-stone-50 {
+  background-color: #f2e9d7 !important;
+  border-color: #e4d7bf !important;
+}
+
+html.mode-nyaman .bg-stone-100 {
+  background-color: #eee2cd !important;
+  border-color: #e0d2b7 !important;
+}
+
+html.mode-nyaman .bg-stone-200 {
+  background-color: #e1d3b9 !important;
+}
+
+/* Borders in Mode Nyaman */
+html.mode-nyaman .border-stone-100,
+html.mode-nyaman .border-stone-200,
+html.mode-nyaman .border-emerald-900\/10 {
+  border-color: #e4d7bf !important;
+}
+
+/* Typography tones in Mode Nyaman */
+html.mode-nyaman .text-stone-900,
+html.mode-nyaman .text-stone-800 {
+  color: #2c221a !important;
+}
+
+html.mode-nyaman .text-stone-700,
+html.mode-nyaman .text-stone-600 {
+  color: #514336 !important;
+}
+
+html.mode-nyaman .text-stone-500,
+html.mode-nyaman .text-stone-400 {
+  color: #726252 !important;
+}
+
+/* Arabic typography in Mode Nyaman */
+html.mode-nyaman .font-arabic {
+  color: #20160e !important;
+}
+
+/* Soft warm emerald elements */
+html.mode-nyaman .bg-emerald-50 {
+  background-color: #edf3ec !important;
+  border-color: #d2e4d0 !important;
+}
+
+/* Footer in Mode Nyaman */
+html.mode-nyaman footer {
+  background-color: rgba(247, 241, 229, 0.85) !important;
+  border-color: #e4d7bf !important;
+}
+
+/* Text selection in Mode Nyaman */
+html.mode-nyaman ::selection {
+  background-color: #fce8bd !important;
+  color: #1e150d !important;
+}
+
+/* Print layout optimizations */
+@media print {
+  nav, footer, .no-print, button {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
